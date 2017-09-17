@@ -16,5 +16,10 @@ export default new Router({
 			name: 'quiz',
 			component: () => import('@/components/Quiz'),
 		},
+		{
+			path: '/final',
+			name: 'final',
+			component: () => import('@/components/Final'),
+		},
 	],
 });

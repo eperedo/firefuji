@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>fujideces</title>
+	<title>Fujideces</title>
 	<link rel="icon" type="image/png" sizes="32x32" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-16x16.png">
 	<!--[if IE]><link rel="shortcut icon" href="/static/img/icons/favicon.ico"><![endif]-->
@@ -16,7 +16,7 @@
 	<!-- Add to home screen for Safari on iOS -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="fujideces">
+	<meta name="apple-mobile-web-app-title" content="Fujideces">
 	<link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/apple-touch-icon-152x152.png">
 	<!-- Add to home screen for Windows -->
 	<meta name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/msapplication-icon-144x144.png">
@@ -26,7 +26,7 @@
           if (file.match(/\.(js|css)$/)) { %>
 		<link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
 		<% }}} %>
-			<link rel="preload" href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' as="style">
+			<link rel="preload" href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700' as="style">
 			<style>
 				html {
 					font-family: Roboto-Light, Helvetica-Light, sans-serif;
@@ -43,7 +43,7 @@
 	<!-- Todo: only include in production -->
 	<%= htmlWebpackPlugin.options.serviceWorkerLoader %>
 		<!-- built files will be auto injected -->
-		<link rel="stylesheet" href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'>
+		<link rel="stylesheet" href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
 </body>
 
 </html>

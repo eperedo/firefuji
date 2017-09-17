@@ -55,7 +55,7 @@ function nextOption() {
 	this.$bindAsArray('options', db.ref(url), null, (snapshot) => {
 		const values = snapshot.val();
 		if (values === null) {
-			this.$router.push({ name: 'final', params: { total: this.total } });
+			this.$router.push({ name: 'final', params: { total: this.currentQuizNumber - 1, totalCorrect: this.total } });
 		}
 	});
 }
@@ -89,13 +89,15 @@ export default {
 <style lang="scss" scoped>
 .quiz-container {
 	align-items: center;
-	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px rgba(0, 0, 0, .14), 0 1px 14px rgba(0, 0, 0, .12)!important;
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 	justify-content: center;
 
 	header {
 		padding: 2%;
+		text-align: center;
+		width: 100%;
 	}
 }
 

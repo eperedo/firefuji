@@ -17,16 +17,7 @@ import AuthorItem from './AuthorItem';
 
 function data() {
 	return {
-		authors: {
-			1: {
-				name: 'Hector Becerrill',
-				images: ['//www.fillmurray.com/128/128', '//www.fillmurray.com/128/128'],
-			},
-			25: {
-				name: 'Karina Beteta',
-				images: ['//www.fillmurray.com/128/128', '//www.fillmurray.com/128/128'],
-			},
-		},
+		authors: [],
 	};
 }
 
@@ -67,5 +58,12 @@ export default {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+}
+
+@media only screen and (max-device-width: 1024px) {
+
+	.author-list-items {
+		flex-direction: column;
+	}
 }
 </style>

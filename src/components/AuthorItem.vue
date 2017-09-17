@@ -75,5 +75,12 @@ button[disabled] {
 	cursor: not-allowed;
 	opacity: 0.6;
 }
+
+@media only screen and (max-device-width: 1024px) {
+
+	button {
+		min-width: 100px;
+	}
+}
 </style>
 
