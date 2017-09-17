@@ -1,7 +1,7 @@
 <template>
 	<section class="author-list">
 		<header>
-			<h2>Selecciona tu personaje favorito</h2>
+			<h1>Selecciona tu personaje favorito</h1>
 		</header>
 		<section class="author-list-items">
 			<author-item v-for="(author, index) in authors" v-bind:key="author.id" v-bind:id="author.id" v-bind:name="author.name" v-bind:images="author.images" v-bind:select="onSelectAuthor">

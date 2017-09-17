@@ -21,5 +21,10 @@ export default new Router({
 			name: 'final',
 			component: () => import('@/components/Final'),
 		},
+		{
+			path: '/faq',
+			name: 'faq',
+			component: () => import('@/components/Faq'),
+		},
 	],
 });
