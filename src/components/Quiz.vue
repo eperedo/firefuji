@@ -1,6 +1,8 @@
 <template>
 	<section class="quiz-container">
-		<header>Elige el tweet real</header>
+		<header>
+			<h3>{{author.name}} - Elige el tweet real</h3>
+		</header>
 		<section class="quiz-answer-container" v-if="correct.link">
 			<header>
 				<h4 v-bind:style="{ 'color': isCorrect ? 'blue' : 'red' }">
@@ -28,10 +30,20 @@ import { db } from '@/shared/firebase';
 import QuizItem from './QuizItem';
 
 function created() {
+	if (this.$route.params.name) {
+		this.author = this.$route.params;
+	} else {
+		this.$bindAsObject('author', db.ref(`/authors/${this.$route.params.id}`));
+	}
 }
 
 function data() {
 	return {
+		author: {
+			id: 0,
+			name: '',
+			images: [],
+		},
 		correct: {},
 		currentQuizNumber: 1,
 		isCorrect: null,
