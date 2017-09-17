@@ -4,7 +4,7 @@
 			<h2>Selecciona tu personaje favorito</h2>
 		</header>
 		<section class="author-list-items">
-			<author-item v-for="(author, index) in authors" v-bind:key="index" v-bind:id="index" v-bind:name="author.name" v-bind:images="author.images" v-bind:select="onSelectAuthor">
+			<author-item v-for="(author, index) in authors" v-bind:key="author.id" v-bind:id="author.id" v-bind:name="author.name" v-bind:images="author.images" v-bind:select="onSelectAuthor">
 			</author-item>
 		</section>
 	</section>
@@ -12,6 +12,7 @@
 
 <script>
 
+import { db } from '@/shared/firebase';
 import AuthorItem from './AuthorItem';
 
 function data() {
@@ -29,6 +30,14 @@ function data() {
 	};
 }
 
+function firebase() {
+	return {
+		authors: {
+			source: db.ref('/authors'),
+		},
+	};
+}
+
 function onSelectAuthor(author) {
 	this.$router.push({ name: 'quiz', params: author });
 }
@@ -39,6 +48,7 @@ export default {
 		AuthorItem,
 	},
 	data,
+	firebase,
 	methods: {
 		onSelectAuthor,
 	},

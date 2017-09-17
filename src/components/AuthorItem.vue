@@ -6,7 +6,7 @@
 		</picture>
 		<p>{{name}}</p>
 		<button v-on:click="selectedItem()">
-			Ver Fujideces
+			Elegir
 		</button>
 	</section>
 </template>
@@ -23,14 +23,15 @@ export default {
 	props: {
 		images: {
 			type: Array,
-			default: ['', ''],
+			default: () => ['//www.fillmurray.com/128/128', '//www.fillmurray.com/128/128'],
 		},
 		name: {
-			type: String,
+			type: [String],
 			required: true,
 		},
 		id: {
-			type: String,
+			type: [Number, String],
+			required: true,
 		},
 		select: {
 			type: Function,
@@ -58,6 +59,21 @@ img {
 	border-radius: 50%;
 	height: 128px;
 	width: 128px;
+}
+
+button {
+	background-color: orangered;
+	border: none;
+	border-radius: 5%;
+	color: #fff;
+	cursor: pointer;
+	min-width: 60px;
+	padding: 5%;
+}
+
+button[disabled] {
+	cursor: not-allowed;
+	opacity: 0.6;
 }
 </style>
 
