@@ -53,6 +53,7 @@ export default {
 	justify-content: center;
 	margin: 2%;
 	padding: 2%;
+	width: 200px;
 }
 
 img {
