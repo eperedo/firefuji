@@ -3,7 +3,7 @@
 		<div class="score">
 			<h2>Resultado</h2>
 			<div>
-				<h3>{{percentage}} %</h3>
+				<h3>{{percentage | round}} %</h3>
 				<h5>Adivinaste {{$route.params.totalCorrect}} de {{$route.params.total}}</h5>
 				<router-link to="/">Ver más fujideces</router-link>
 			</div>
@@ -28,8 +28,15 @@ function data() {
 	};
 }
 
+function round(value) {
+	return value.toFixed(2);
+}
+
 export default {
 	name: 'final',
+	filters: {
+		round,
+	},
 	created,
 	data,
 };
