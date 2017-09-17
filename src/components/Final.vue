@@ -15,7 +15,7 @@
 
 function created() {
 	const { total, totalCorrect } = this.$route.params;
-	if (total && totalCorrect) {
+	if (typeof total !== 'undefined' && typeof totalCorrect !== 'undefined') {
 		this.percentage = (totalCorrect * 100) / total;
 	} else {
 		this.$router.push({ name: 'home' });
