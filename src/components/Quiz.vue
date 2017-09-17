@@ -116,7 +116,7 @@ export default {
 .quiz-answer-container {
 	align-items: center;
 	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px rgba(0, 0, 0, .14), 0 1px 14px rgba(0, 0, 0, .12)!important;
-	border: 2px solid lightcoral;
+	border: 2px solid lightblue;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

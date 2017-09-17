@@ -4,6 +4,7 @@
 			<h2>Resultado</h2>
 			<div>
 				<h3>{{percentage}} %</h3>
+				<h5>Adivinaste {{$route.params.totalCorrect}} de {{$route.params.total}}</h5>
 				<router-link to="/">Ver más fujideces</router-link>
 			</div>
 		</div>

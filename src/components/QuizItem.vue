@@ -1,5 +1,5 @@
 <template>
-	<button class="quiz-item" v-bind:class="quizClass" v-on:click.once="onSelectQuiz">
+	<button class="quiz-item" v-bind:class="quizClass" v-on:click="onSelectQuiz" v-bind:disabled="quizClass.length > 0">
 		{{text}}
 	</button>
 </template>
