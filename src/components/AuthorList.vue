@@ -62,6 +62,12 @@ export default {
 
 @media only screen and (max-device-width: 1024px) {
 
+	.author-list {
+		header {
+			text-align: center;
+		}
+	}
+
 	.author-list-items {
 		flex-direction: column;
 	}

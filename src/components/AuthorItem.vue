@@ -79,6 +79,10 @@ button[disabled] {
 
 @media only screen and (max-device-width: 1024px) {
 
+	.author-item {
+		width: 100%;
+	}
+
 	button {
 		min-width: 100px;
 	}
